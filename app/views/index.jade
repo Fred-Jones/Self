@@ -1,0 +1,70 @@
+extends layout
+
+block css
+    
+    link(href='css/index.css' rel='stylesheet' type='text/css')
+
+block content
+    .home
+        .homeinner
+            .tree
+                img(src='img/tree.svg' class="img-responsive center-block" alt="Responsive image")
+            .name
+                h2
+                    p F 
+                    p i 
+                    p r 
+                    p s 
+                    p t  
+                    p L 
+                    p a 
+                    p s 
+                    p t 
+                    p n 
+                    p a 
+                    p m 
+                    p e 
+            .statement
+                p The Statement
+            .ico    
+              ul.soc
+                li
+                  a.soc-twitter(href='#')
+                li
+                  a.soc-linkedin(href='#')
+                li
+                  a.soc-github(href='#')
+                li
+                  a.soc-email1.soc-icon-last(href='#')
+
+
+            .menu
+                ul.menulist
+                    - var menu = ["Home", "About", "Contact"];
+                            for item in menu
+                                li #{item}
+        div#down
+            img(src='img/down.svg')
+    .sidemenu
+        ul
+            - var menu = ["Home", "About", "Contact"];
+                    for item in menu
+                        span(id='#{item}' class='menuitem')
+                            for letter in item
+                                p(id='#{item}') #{letter}
+    .space
+        .sinner: p .space .sinner
+    .page
+        .inner
+    .space
+        .sinner: p .space .sinner
+    .page
+        .inner
+    .page#last 
+        .inner
+            img.roots(src='img/roots.svg' class="img-responsive center-block" alt="Responsive image")
+block scripts
+  script(src='js/index.js')
+
+
+                        
